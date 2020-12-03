@@ -1,0 +1,17 @@
+16일차
+*https://myungke414.github.io/jungle/class_3/01_mediaquery.html
+
+1)
+height: auto;
+초기화시켜 자동으로 맞춰줌
+
+width:100%; = width: auto;
+
+2)
+
+
+
+
+
+
+
