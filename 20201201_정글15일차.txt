@@ -1,0 +1,137 @@
+15일차
+*skt 중간에 아코디언으로 바꾸고, 5_etc적용시키기
+*ㅁ누르고 오른쪽 ctrl누르면 특수문자 나옴
+*CODEPEN사이트> transition, animation
+
+1)
+*(모두 선택)
+해당선택자 모두 선택
+.box > *{}
+.box *{}
+
+2)
+body, h1{margin:0}
+html, body{height:100%}
+.wrap{width:700px; height:50%; background:#ccc}
+.unit{background: red; height:50%}
+바로 상위 기준임			
+
+3)
+body, h1{margin:0}
+.wrap{width:700px; height:100%; background:#ccc}
+부모가 값이없어서 height가 안생긴다.
+
+4)
+.wrap{width:700px; height:50vh; background:#ccc}
+viewport(화면상에 보이는 값)의 50% = 50vh
+viewport(화면상에 보이는 값)의 100% = 100vw
+
+5)
+body, h1{margin:0}
+.wrap{width:100vw; height:50vh; background:#ccc}
+.unit{
+   background-color: red;
+   height: 60vh;
+}
+
+6)
+width:calc(100% - 100px);
+길이에 비해 100px을 빼서 공간을 자동으로 마련한다
+
+7)
+transition: width 1s, height 1s, background-color 1s;
+변경될때 애니메이션 주는 속성
+
+8)
+transition: all 1s;
+모든 속성에 효과 적용
+
+9)			.box{
+				width: 50px;
+				height: 50px;
+				background: red;
+				animation: jungle_ani 3s infinite;
+			}
+			@keyframes jungle_ani{
+				0%{width:50px; height:50px;}
+				50%{width:100px; height:50px;}
+				100%{width:100px; height:100px;}
+			}
+infinite는 계속 반복된다
+
+10)
+transform: scale(3);
+3배만큼 커진다
+
+11)
+transform: translateX(-100px);
+왼쪽으로 100px 움직인다
+
+12)
+transform: translate(50px, 100px);
+X축 Y축 둘다 이동
+
+13)
+transform: rotate(45deg);
+회전시킨다
+
+14)
+transform: skew(10deg);
+transform: skew(-10deg);
+비튼다
+
+15)
+.box + .box 
+두번째 세번째 box를 선택하는 것이다
+
+16)
+transform: scale(2);
+transform은 다른녀석들에게 영향을 주지 않는다
+
+17)
+<div class="section visual">
+.visual{}
+사용 가능
+
+18)
+position: absolute;
+겹쳤는데 왼쪽으로 붙음
+inline이라서 width:100%적용하면 가운데 붙음
+
+19)
+.arrcordion > ul > li > a{
+	background: #333;
+}
+inline이라서 텍스트크기만큼만 백그라운드 적용됨
+
+20)
+line-height:50px;
+가운데로 위치시킴
+
+21)
+text-decoration: line-through; 삭선
+text-decoration: overline; 라인이 위로 들어감
+
+22)
+height:0;
+overflow: hidden;
+높이 없이 들어가있다
+
+23)
+.arrcordion > ul > li:hover .subs
+li에 hover했을때 subs가 선택되게 하는 것임
+
+24)
+.arrcordion > ul > li:hover > a
+부모가 되는 녀석에게 hover를 해주도록 한다
+
+
+
+
+
+
+
+
+
+
+
