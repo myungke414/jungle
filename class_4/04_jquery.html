@@ -16,15 +16,40 @@
 		<script>
 			//html 로드가 다 되고 난 이후에 실행되는 제이쿼리 함수
 			$(function(){
-				
+				////////////선택자///////////
+				// $(".btn > span").css({
+				// 	"border":"1px solid #000"
+				// 	})
+				$(".btn").eq(2).css({
+					"border":"3px solid red"
+				})
+				$(".btn").next().css({
+					"color":"#f69B34"
+				})
+				$(".btn").parent().css({
+					"background":"#333"
+				})
+				$(".btn").find("span").css({
+					"font-weight":"bold"
+				})
+
+				/////////class
+				//$(".btn").eq(0).addClass("on");
+				$(".btn").eq(3).removeClass("on");
+
+				$(".btn").click(function(){
+				//$(".btn").eq(0).addClass("on");
+				//$(this).addClass("on");
+				$(this).toggleClass("on");
+				});
 			});
 
-			$(function(){
-				//$(".btn").find("span").css({"border":"1px solid #000"})
-				$(".btn").eq(1).addClass("on");
-				$(".btn").eq(3).removeClass("on");
-				$(".btn").eq(1).toggleClass("on");
-			})
+			// $(function(){
+			// 	//$(".btn").find("span").css({"border":"1px solid #000"})
+			// 	$(".btn").eq(1).addClass("on");
+			// 	$(".btn").eq(3).removeClass("on");
+			// 	$(".btn").eq(1).toggleClass("on");
+			// })
 		</script>
   </head>
   <body>

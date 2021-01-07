@@ -36,22 +36,43 @@
 	</style>
 	<script>
 		$(function () {
+			
 			$(".btn_top").hide();
+			//$(this).scrollTop(500);//시작할때 500위치에 위치해있기
 			$(window).scroll(function(){
-				//console.log($(this).scrollTop());
+				console.log($(this).scrollTop());
 				if($(this).scrollTop() == 0){
 					$(".btn_top").hide(300);
 				}else{
 					$(".btn_top").show(300);
 				}
-			})
+			});
 
+			//클릭시 스크롤이 500px밑으로 이동해라
 			$(".btn_top").click(function(){
-				//$("html").scrollTop(0);
+				//$(window).scrollTop(500);
 				$("html").animate({
 					"scrollTop":0
-				}, 1000);
-			});
+				},1000)
+			})
+
+
+			// $(".btn_top").hide();
+			// $(window).scroll(function(){
+			// 	//console.log($(this).scrollTop());
+			// 	if($(this).scrollTop() == 0){
+			// 		$(".btn_top").hide(300);
+			// 	}else{
+			// 		$(".btn_top").show(300);
+			// 	}
+			// })
+
+			// $(".btn_top").click(function(){
+			// 	//$("html").scrollTop(0);
+			// 	$("html").animate({
+			// 		"scrollTop":0
+			// 	}, 1000);
+			// });
 		})
 	</script>
 </head>
